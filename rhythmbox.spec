@@ -4,10 +4,10 @@
 #
 Name     : rhythmbox
 Version  : 3.4.3
-Release  : 2
+Release  : 3
 URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.3.tar.xz
 Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.3.tar.xz
-Summary  : plugin API for rhythmbox
+Summary  : Music playback and management application
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: rhythmbox-bin = %{version}-%{release}
@@ -69,7 +69,6 @@ Group: Binaries
 Requires: rhythmbox-data = %{version}-%{release}
 Requires: rhythmbox-libexec = %{version}-%{release}
 Requires: rhythmbox-license = %{version}-%{release}
-Requires: rhythmbox-man = %{version}-%{release}
 
 %description bin
 bin components for the rhythmbox package.
@@ -90,6 +89,7 @@ Requires: rhythmbox-lib = %{version}-%{release}
 Requires: rhythmbox-bin = %{version}-%{release}
 Requires: rhythmbox-data = %{version}-%{release}
 Provides: rhythmbox-devel = %{version}-%{release}
+Requires: rhythmbox = %{version}-%{release}
 
 %description dev
 dev components for the rhythmbox package.
@@ -156,7 +156,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550512979
+export SOURCE_DATE_EPOCH=1557023771
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --disable-fm-radio
 make  %{?_smp_mflags}
 
@@ -168,7 +175,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1550512979
+export SOURCE_DATE_EPOCH=1557023771
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/rhythmbox
 cp COPYING %{buildroot}/usr/share/package-licenses/rhythmbox/COPYING
