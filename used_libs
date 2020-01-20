@@ -20,6 +20,7 @@ libgsttag-1.0.so.0
 libgstvideo-1.0.so.0
 libgtk-3.so.0
 libgudev-1.0.so.0
+libharfbuzz.so.0
 libjson-glib-1.0.so.0
 libm.so.6
 libmtp.so.9
