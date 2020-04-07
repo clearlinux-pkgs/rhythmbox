@@ -4,7 +4,7 @@
 #
 Name     : rhythmbox
 Version  : 3.4.4
-Release  : 4
+Release  : 5
 URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz
 Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz
 Summary  : plugin API for rhythmbox
@@ -157,14 +157,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579535757
+export SOURCE_DATE_EPOCH=1586243704
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --disable-fm-radio
 make  %{?_smp_mflags}
@@ -177,7 +177,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1579535757
+export SOURCE_DATE_EPOCH=1586243704
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/rhythmbox
 cp %{_builddir}/rhythmbox-3.4.4/COPYING %{buildroot}/usr/share/package-licenses/rhythmbox/3f772bdc589b117aeeb6fbbf5bd277d7c3015a56
