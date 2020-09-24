@@ -4,7 +4,7 @@
 #
 Name     : rhythmbox
 Version  : 3.4.4
-Release  : 5
+Release  : 6
 URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz
 Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.4.tar.xz
 Summary  : plugin API for rhythmbox
