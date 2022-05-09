@@ -1,0 +1,14 @@
+3.4.5
+appstream-glib
+libnotify-dev
+libpeas-dev
+libsoup-dev
+pkgconfig(grilo-0.3)
+pkgconfig(libmtp)
+pkgconfig(libnotify)
+pkgconfig(libpeas-1.0)
+pkgconfig(libsecret-1)
+pkgconfig(libsoup-2.4)
+pkgconfig(pygobject-3.0)
+pkgconfig(tdb)
+pkgconfig(totem-plparser)

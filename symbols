@@ -487,6 +487,7 @@ librhythmbox-core.so.10:rb_podcast_add_dialog_new
 librhythmbox-core.so.10:rb_podcast_add_dialog_reset
 librhythmbox-core.so.10:rb_podcast_channel_get_type
 librhythmbox-core.so.10:rb_podcast_feed_entry_type_get_type
+librhythmbox-core.so.10:rb_podcast_feed_update_status_get_type
 librhythmbox-core.so.10:rb_podcast_get_feed_entry_type
 librhythmbox-core.so.10:rb_podcast_get_post_entry_type
 librhythmbox-core.so.10:rb_podcast_get_search_entry_type
@@ -502,6 +503,7 @@ librhythmbox-core.so.10:rb_podcast_manager_delete_download
 librhythmbox-core.so.10:rb_podcast_manager_download_entry
 librhythmbox-core.so.10:rb_podcast_manager_entry_downloaded
 librhythmbox-core.so.10:rb_podcast_manager_entry_in_download_queue
+librhythmbox-core.so.10:rb_podcast_manager_feed_updating
 librhythmbox-core.so.10:rb_podcast_manager_get_podcast_dir
 librhythmbox-core.so.10:rb_podcast_manager_get_searches
 librhythmbox-core.so.10:rb_podcast_manager_get_type
@@ -510,10 +512,11 @@ librhythmbox-core.so.10:rb_podcast_manager_new
 librhythmbox-core.so.10:rb_podcast_manager_remove_feed
 librhythmbox-core.so.10:rb_podcast_manager_shutdown
 librhythmbox-core.so.10:rb_podcast_manager_subscribe_feed
-librhythmbox-core.so.10:rb_podcast_manager_unsubscribe_feed
 librhythmbox-core.so.10:rb_podcast_manager_update_feeds
 librhythmbox-core.so.10:rb_podcast_parse_channel_copy
-librhythmbox-core.so.10:rb_podcast_parse_channel_free
+librhythmbox-core.so.10:rb_podcast_parse_channel_new
+librhythmbox-core.so.10:rb_podcast_parse_channel_ref
+librhythmbox-core.so.10:rb_podcast_parse_channel_unref
 librhythmbox-core.so.10:rb_podcast_parse_error_quark
 librhythmbox-core.so.10:rb_podcast_parse_item_copy
 librhythmbox-core.so.10:rb_podcast_parse_item_free
@@ -805,6 +808,7 @@ librhythmbox-core.so.10:rb_task_progress_simple_new
 librhythmbox-core.so.10:rb_text_cat
 librhythmbox-core.so.10:rb_text_common_direction
 librhythmbox-core.so.10:rb_text_direction_conflict
+librhythmbox-core.so.10:rb_text_numeric_get_pango_attr_list
 librhythmbox-core.so.10:rb_threads_init
 librhythmbox-core.so.10:rb_track_transfer_batch_add
 librhythmbox-core.so.10:rb_track_transfer_batch_cancel
@@ -825,6 +829,8 @@ librhythmbox-core.so.10:rb_transfer_target_get_type
 librhythmbox-core.so.10:rb_transfer_target_should_transfer
 librhythmbox-core.so.10:rb_transfer_target_track_add_error
 librhythmbox-core.so.10:rb_transfer_target_track_added
+librhythmbox-core.so.10:rb_transfer_target_track_prepare
+librhythmbox-core.so.10:rb_transfer_target_track_upload
 librhythmbox-core.so.10:rb_transfer_target_transfer
 librhythmbox-core.so.10:rb_tree_dnd_add_drag_dest_support
 librhythmbox-core.so.10:rb_tree_dnd_add_drag_source_support
@@ -850,6 +856,7 @@ librhythmbox-core.so.10:rb_uri_get_mount_point
 librhythmbox-core.so.10:rb_uri_get_short_path_name
 librhythmbox-core.so.10:rb_uri_handle_recursively
 librhythmbox-core.so.10:rb_uri_handle_recursively_async
+librhythmbox-core.so.10:rb_uri_is_descendant
 librhythmbox-core.so.10:rb_uri_is_directory
 librhythmbox-core.so.10:rb_uri_is_hidden
 librhythmbox-core.so.10:rb_uri_is_local
@@ -865,7 +872,6 @@ librhythmbox-core.so.10:rb_utf_friendly_time
 librhythmbox-core.so.10:rb_value_array_append_data
 librhythmbox-core.so.10:rb_value_free
 librhythmbox-core.so.10:rb_xfade_stream_get_type
-librhythmbox-core.so.10:rhythmbox_get_resource
 librhythmbox-core.so.10:rhythmdb_add_uri
 librhythmbox-core.so.10:rhythmdb_add_uri_with_types
 librhythmbox-core.so.10:rhythmdb_commit
@@ -956,6 +962,7 @@ librhythmbox-core.so.10:rhythmdb_import_job_get_imported
 librhythmbox-core.so.10:rhythmdb_import_job_get_processed
 librhythmbox-core.so.10:rhythmdb_import_job_get_total
 librhythmbox-core.so.10:rhythmdb_import_job_get_type
+librhythmbox-core.so.10:rhythmdb_import_job_includes_uri
 librhythmbox-core.so.10:rhythmdb_import_job_new
 librhythmbox-core.so.10:rhythmdb_import_job_scan_complete
 librhythmbox-core.so.10:rhythmdb_import_job_start
