@@ -1,8 +1,9 @@
-3.4.5
+3.4.6
 appstream-glib
 libnotify-dev
 libpeas-dev
 libsoup-dev
+pkgconfig(check)
 pkgconfig(grilo-0.3)
 pkgconfig(libmtp)
 pkgconfig(libnotify)
