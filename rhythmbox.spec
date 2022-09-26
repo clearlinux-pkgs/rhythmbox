@@ -4,7 +4,7 @@
 #
 Name     : rhythmbox
 Version  : 3.4.6
-Release  : 10
+Release  : 11
 URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.6.tar.xz
 Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.6.tar.xz
 Summary  : plugin API for rhythmbox
@@ -140,7 +140,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656091929
+export SOURCE_DATE_EPOCH=1664162126
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -161,7 +161,7 @@ meson test -C builddir --print-errorlogs || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/rhythmbox
-cp %{_builddir}/rhythmbox-3.4.6/COPYING %{buildroot}/usr/share/package-licenses/rhythmbox/3f772bdc589b117aeeb6fbbf5bd277d7c3015a56
+cp %{_builddir}/rhythmbox-%{version}/COPYING %{buildroot}/usr/share/package-licenses/rhythmbox/3f772bdc589b117aeeb6fbbf5bd277d7c3015a56 || :
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang rhythmbox
 
