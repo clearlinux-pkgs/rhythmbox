@@ -626,7 +626,6 @@ librhythmbox-core.so.10:rb_shell_clipboard_set_source
 librhythmbox-core.so.10:rb_shell_do_notify
 librhythmbox-core.so.10:rb_shell_error_get_type
 librhythmbox-core.so.10:rb_shell_error_quark
-librhythmbox-core.so.10:rb_shell_get_party_mode
 librhythmbox-core.so.10:rb_shell_get_song_properties
 librhythmbox-core.so.10:rb_shell_get_source_by_entry_type
 librhythmbox-core.so.10:rb_shell_get_type

@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : rhythmbox
-Version  : 3.4.6
-Release  : 12
-URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.6.tar.xz
-Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.6.tar.xz
+Version  : 3.4.7
+Release  : 13
+URL      : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.7.tar.xz
+Source0  : https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.7.tar.xz
 Summary  : plugin API for rhythmbox
 Group    : Development/Tools
 License  : GPL-2.0
@@ -27,14 +27,12 @@ BuildRequires : gdk-pixbuf
 BuildRequires : gst-plugins-base-dev
 BuildRequires : libnotify-dev
 BuildRequires : libpeas-dev
-BuildRequires : libsoup-dev
 BuildRequires : pkgconfig(check)
 BuildRequires : pkgconfig(grilo-0.3)
 BuildRequires : pkgconfig(libmtp)
 BuildRequires : pkgconfig(libnotify)
 BuildRequires : pkgconfig(libpeas-1.0)
 BuildRequires : pkgconfig(libsecret-1)
-BuildRequires : pkgconfig(libsoup-2.4)
 BuildRequires : pkgconfig(pygobject-3.0)
 BuildRequires : pkgconfig(tdb)
 BuildRequires : pkgconfig(totem-plparser)
@@ -46,7 +44,7 @@ BuildRequires : pygobject
 %description
 General Information
 ===================
-This is Rhythmbox version 3.4.6. Rhythmbox is your one-stop multimedia
+This is Rhythmbox version 3.4.7. Rhythmbox is your one-stop multimedia
 application, supporting a music library, multiple playlists,
 internet radio, and more.
 
@@ -136,15 +134,15 @@ man components for the rhythmbox package.
 
 
 %prep
-%setup -q -n rhythmbox-3.4.6
-cd %{_builddir}/rhythmbox-3.4.6
+%setup -q -n rhythmbox-3.4.7
+cd %{_builddir}/rhythmbox-3.4.7
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680042135
+export SOURCE_DATE_EPOCH=1681857103
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -279,6 +277,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %defattr(-,root,root,-)
 /usr/include/rhythmbox/backends/rb-encoder.h
 /usr/include/rhythmbox/backends/rb-player-gst-filter.h
+/usr/include/rhythmbox/backends/rb-player-gst-helper.h
 /usr/include/rhythmbox/backends/rb-player-gst-tee.h
 /usr/include/rhythmbox/backends/rb-player.h
 /usr/include/rhythmbox/lib/libmediaplayerid/mediaplayerid.h
@@ -456,6 +455,16 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/help/gl/rhythmbox/figures/rb-window.png
 /usr/share/help/gl/rhythmbox/index.docbook
 /usr/share/help/gl/rhythmbox/legal.xml
+/usr/share/help/id/rhythmbox/figures/rb-iradio-main.png
+/usr/share/help/id/rhythmbox/figures/rb-notification-zone.png
+/usr/share/help/id/rhythmbox/figures/rb-podcast-main.png
+/usr/share/help/id/rhythmbox/figures/rb-toolbar-prevplaynext.png
+/usr/share/help/id/rhythmbox/figures/rb-toolbar-repeat.png
+/usr/share/help/id/rhythmbox/figures/rb-toolbar-shuffle.png
+/usr/share/help/id/rhythmbox/figures/rb-volume-changer.png
+/usr/share/help/id/rhythmbox/figures/rb-window.png
+/usr/share/help/id/rhythmbox/index.docbook
+/usr/share/help/id/rhythmbox/legal.xml
 /usr/share/help/it/rhythmbox/figures/rb-iradio-main.png
 /usr/share/help/it/rhythmbox/figures/rb-notification-zone.png
 /usr/share/help/it/rhythmbox/figures/rb-podcast-main.png
